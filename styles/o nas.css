@@ -1,0 +1,244 @@
+/* --- Базовые настройки --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, ttnorms 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 2;
+    background-color: #b2b2b5;
+    color: aqua;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.text {
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+p {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* --- Контейнер --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Шапка (Header) --- */
+.header {
+    background: -webkit-linear-gradient(270deg, #0a4af8, #0a0181, #05060a);
+    color: rgb(10, 232, 136);
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 2rem;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- Основной контент --- */
+.main-content {
+    padding: 40px 0;
+}
+
+.about-us,
+.team,
+.contact-us {
+    background: -webkit-linear-gradient(360deg, #0a4af8, #190bda, #05060a);
+    margin-bottom: 30px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.about-us h2,
+.team h2,
+.contact-us h2 {
+    margin-bottom: 25px;
+    color: #08de16;
+}
+
+.about-us p {
+    margin-bottom: 15px;
+}
+
+
+
+/* --- Форма обратной связи --- */
+.contact-us form {
+    display: grid;
+    gap: 18px;
+}
+
+.contact-us label {
+    font-weight: bold;
+}
+
+.contact-us input,
+.contact-us textarea,
+.contact-us button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.contact-us button {
+    background-color: #27ae60;
+    /* Зеленый */
+    color: white;
+    border-color: #27ae60;
+    cursor: pointer;
+}
+
+.contact-us button:hover {
+    background-color: #2ecc71;
+    /* Светлее */
+}
+
+
+/* Стили для родительского контейнера */
+.container-card {
+    display: flex;
+    flex-direction: column;
+    /* Включаем флекс-модель */
+    gap: 20px;
+    /* Отступы между карточками */
+    padding: 20px;
+    background: -webkit-linear-gradient(360deg, #0d0de6, #2704ef, #0b0b0b);
+}
+
+/* Стили для каждой карточки */
+.card-container {
+    flex: 1;
+    /* Карточки будут занимать равное пространство */
+    min-width: 250px;
+    /* Минимальная ширина, чтобы карточки не сжимались слишком сильно */
+    padding: 20px;
+    background: -webkit-linear-gradient(90deg, #0d0de6, #2704ef, #0b0b0b);
+    border-radius: 8px;
+
+    /* Тень */
+    box-shadow: 0 4px 8px rgba(15, 15, 15, 0.1);
+
+    /* Для красоты */
+    text-align: center;
+}
+
+/* Добавим эффект при наведении курсора */
+.card-container:hover {
+    box-shadow: 0 8px 16px rgb(65, 239, 7);
+    transform: translateY(-5px);
+    /* Немного приподнимает карточку */
+    transition: all 0.3s ease;
+    /* Плавный переход */
+}
+
+/* --- Подвал (Footer) --- */
+.footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* --- Адаптивность (Мобильные устройства) --- */
+@media (max-width: 768px) {
+    .header nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        margin-top: 15px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        padding-left: 15px;
+        /* Отступ для карточек */
+        padding-right: 15px;
+        /* Отступ для карточек */
+        margin-left: -15px;
+        /* Компенсация паддингов контейнера */
+        margin-right: -15px;
+        /* Компенсация паддингов контейнера */
+        margin-top: -15px;
+        /* Компенсация паддингов контейнера */
+        margin-bottom: -15px;
+        /* Компенсация паддингов контейнера */
+        border-radius: inherit;
+        /* Чтобы не ломалась рамка секции */
+        overflow-x: hidden;
+        /* Убираем горизонтальный скролл при компенсации паддингов */
+        background-clip: padding-box;
+        /* Фон не выходит за рамки паддингов */
+        box-shadow: none;
+        /* Убираем тень у сетки, оставляем у карточек */
+        padding-top: 15px;
+        /* Внутренний отступ сверху для карточек */
+        padding-bottom: 15px;
+        /* Внутренний отступ снизу для карточек */
+        margin-top: -15px;
+        /* Компенсация внутреннего отступа сверху секции */
+        margin-bottom: -15px;
+        /* Компенсация внутреннего отступа снизу секции */
+        border-radius: none;
+        /* Убираем радиус у сетки на мобилках */
+    }
+
+    .team-card {
+        /* Карточки внутри сетки на мобилках не должны иметь паддингов по бокам */
+        padding-left: 15px !important;
+        /* Важность для переопределения стилей сетки */
+        padding-right: 15px !important;
+        /* Важность для переопределения стилей сетки */
+    }
+
+    .contact-us form input,
+    .contact-us form textarea,
+    .contact-us form button {
+        font-size: 1rem;
+        /* Увеличим шрифт на мобилках для удобства ввода */
+    }
+
+    .about-us p,
+    .team h2,
+    .contact-us h2,
+    .team-card h3,
+    .team-card p {
+        font-size: .9rem !important;
+        /* Немного уменьшим текст на малых экранах для плотности верстки */
+    }
+
+    .header h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .main-content h2 {
+        font-size: 1.8rem !important;
+    }
+}

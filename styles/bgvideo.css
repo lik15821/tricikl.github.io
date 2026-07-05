@@ -1,0 +1,50 @@
+.bgvideo video {
+    height: 70vh;
+    width: 100%;
+    /* top: 0; */
+    /* left: 0; */
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 6px;
+}
+.slide-text,
+.footer-text a {
+    color: aquamarine;
+    margin: auto auto;
+    font-size: 20px;
+}
+.footer-text a {
+    text-decoration: none;
+}
+
+@media (max-width:755px) {
+    .carousel-indicators {
+        display: none;
+    }
+}
+
+.myvideo video {
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+z-index: 1;
+
+}
+.myvideo {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.video-text {
+    color: aquamarine;
+    z-index: 2;
+}
+
+

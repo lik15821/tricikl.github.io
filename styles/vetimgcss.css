@@ -1,0 +1,45 @@
+body {
+  font-family: Michromo;
+}
+
+.thumb {
+  width: 300px;
+  height: auto;
+  cursor: zoom-in;
+  transition: transform 0.2s;
+  border: 1px solid #ccc;
+}
+.thumb:hover { transform: scale(1.02); }
+
+/* Модальное окно */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+.overlay.active { display: flex; }
+
+.modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+  border: 2px solid #fff;
+}
+
+/* Кнопка закрытия (по желанию можно кликом по overlay) */
+.close-btn {
+  position: absolute;
+  top: 20px; right: 20px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}

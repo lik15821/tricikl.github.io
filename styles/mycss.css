@@ -1,0 +1,177 @@
+ body {
+     font-family: Michromo;
+ }
+
+ p {
+     color: aquamarine;
+ }
+
+ a {
+     cursor: pointer;
+ }
+
+ body {
+
+     background: -webkit-linear-gradient(90deg, #0f4df7, #0f04ac, #06080c);
+     background: linear-gradient(90deg, #1f5aff, #392ed6, #1a2032);
+ }
+
+ .nav-link {
+     color: aquamarine;
+ }
+
+ .navbar-nav .nav-link.active {
+     color: rgb(139, 139, 138);
+ }
+
+ .navbar-brand img {
+     width: 30px;
+ }
+
+ .navbar-toggler {
+     background-color: rgb(139, 139, 138);
+     ;
+ }
+
+ .card-img-top {
+     height: 250px;
+     width: 100%;
+     object-fit: cover;
+     vertical-align: middle;
+ }
+
+ .img {
+     height: 230px;
+ }
+
+ /* ----------------------------------------------------------------------- */
+
+ .card-img-top {
+     cursor: pointer;
+     transition: transform 0.3s ease;
+ }
+
+ .card-img-top:hover {
+     transform: scale(1.05);
+     /* Легкий эффект при наведении */
+ }
+
+ .sidebar {
+     color: aquamarine;
+     background: -webkit-linear-gradient(180deg, #0a4af8, #190bda, #05060a);
+     height: 100%;
+
+
+ }
+
+ .tric {
+     color: rgb(231, 140, 5);
+ }
+
+ .card {
+     background: -webkit-linear-gradient(270deg, #0a4af8, #190bda, #05060a);
+     color: aquamarine;
+
+ }
+
+.my-button {
+    margin-top: 24px;
+}
+
+.my-btn {
+    margin-top: 5px;
+}
+
+ .footer-text {
+     color: aquamarine;
+     margin: auto auto;
+     font-size: 20px;
+ }
+
+ .sidebar {
+     border-radius: 5px;
+ }
+
+ footer {
+     background: -webkit-linear-gradient(270deg, #0a4af8, #190bda, #05060a);
+ }
+
+ .media-links {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .media-links {
+     cursor: pointer;
+     transition: transform 0.3s ease;
+  
+ }
+
+ .media-links:hover {
+     transform: scale(1.05);
+     /* Легкий эффект при наведении */
+
+
+ }
+
+
+ .bell,
+ .call-anim {
+     display: inline-block;
+     font-size: 50px;
+     /* Устанавливаем точку привязки сверху по центру */
+     transform-origin: top center;
+     /* Название анимации, длительность, тип сглаживания и бесконечный повтор */
+     animation: ring 2s ease-in-out infinite;
+ }
+
+ @keyframes ring {
+     0% {
+         transform: rotate(0);
+     }
+
+     10% {
+         transform: rotate(15deg);
+     }
+
+     20% {
+         transform: rotate(-12deg);
+     }
+
+     30% {
+         transform: rotate(10deg);
+     }
+
+     40% {
+         transform: rotate(-8deg);
+     }
+
+     50% {
+         transform: rotate(6deg);
+     }
+
+     60% {
+         transform: rotate(-4deg);
+     }
+
+     70% {
+         transform: rotate(2deg);
+     }
+
+     80% {
+         transform: rotate(-1deg);
+     }
+
+     90% {
+         transform: rotate(1deg);
+     }
+
+     100% {
+         transform: rotate(0);
+     }
+ }
+
+
+ 
+

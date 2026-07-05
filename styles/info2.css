@@ -1,0 +1,26 @@
+ body {
+    font-family: Michromo;
+}
+ 
+ body {
+    background: -webkit-linear-gradient(180deg, #0a4af8, #190bda, #05060a);
+
+}
+
+.row {
+    height:500px;
+}
+.spisok {
+    height: 100%;
+}
+
+li {
+    color: white;
+}
+img {
+    /* width: 600px; */
+    height: 700px;
+    vertical-align: middle;
+}
+
+    

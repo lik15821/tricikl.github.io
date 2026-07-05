@@ -1,0 +1,222 @@
+    
+/* --- Базовые стили и переменные --- */
+:root {
+    --color-bg-dark: #1a1a1a;
+    --color-text-light: #f5f5f5;
+    --color-accent: #ff6b6b;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Шапка и Навигация --- */
+.site-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+}
+
+.logo {
+    float: left;
+    font-size: 1.8rem;
+}
+
+.main-nav a {
+    display: inline-block;
+    margin-left: 20px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.main-nav a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+/* --- Кнопки --- */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-text-light);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 60px); /* Высота экрана минус высота шапки */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Преимущества (Features) --- */
+.features {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.feature-card img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.feature-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* --- Страница Тарифов --- */
+.pricing-page {
+    padding: 4rem 0;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.plan-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1 1 300px;
+    min-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.plan-card.best-value::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-accent);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 1;
+}
+
+.plan-card.recommended {
+    border: 3px solid var(--color-accent);
+}
+
+.plan-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+.currency {
+    font-size: 0.6em;
+    vertical-align: super;
+}
+
+.plan-card ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.plan-card li {
+    margin-bottom: 0.7rem;
+}
+
+.plan-card button {
+    width: 100%;
+}
+
+/* --- Подвал --- */
+.site-footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero h2 { font-size: 2rem; }
+    .main-nav { text-align: center; }
+    .main-nav a { margin: 0 10px; display: block; }
+}
+
+    

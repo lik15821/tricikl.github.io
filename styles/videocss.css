@@ -1,0 +1,24 @@
+.wvideo video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 5px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.wvideo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-text {
+    color: rgb(239, 84, 6);
+    z-index: 2;
+}
+.slide-text {
+    color: aquamarine;
+}
